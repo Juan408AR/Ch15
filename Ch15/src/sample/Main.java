@@ -59,7 +59,17 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
 }
 
 // Ch15: Event-Driven Programming and Animation
+//
+// Summaries Below:
+//
 // 15.1: Button -> Event -> Handler
 // Buttons are an event source that can trigger an event,
 // the event is then handled by the handler. You also need to have an object
 // be able to handle an event it must extend the EventHandler class
+
+// 15.2: Events and Event Sources:
+// Reminder...Nodes are parts attached to a scene.
+// Event Sources create and fire events.
+// The children can fire events if their parent is able to fire events
+// there are methods and classes for various events and even one to find the source event
+
