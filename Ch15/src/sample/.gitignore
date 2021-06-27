@@ -1,5 +1,5 @@
- ../../../.DS_Store
- ../../../.idea/
+*.DS_Store
+ .idea/
  ../../../Ch15.iml
  ../../out/.DS_Store
  ../../out/production/.DS_Store
