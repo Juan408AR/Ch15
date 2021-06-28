@@ -112,3 +112,21 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
 
 // !!! Creating files instead of putting all into one file
 
+// 15.4 Inner Classes:
+/*
+    Inner classes are usually handler classes like event handlers.
+    Inner classes can reference/obtain outer class methods and data fields.
+    Dependent classes are placed inside.
+    Normally the inner class belongs only to the outer class.
+    The file looks like outer$inner.class
+    Inner can be static in order to be used by the outer without an instance.
+    Inner can have visibility modifiers.
+    Usually the outer creates an instance of the inner but you can also create an instance
+    of the inner in another class by...Outer.Inner referenceVar = new Outer.Inner();
+    If the inner is static you can make the referenceVar of type outer because it will be able to access the static inner
+    Benefits are combining two dependent classes and reduce clutter, the
+    naming would be...outer$inner.class.
+    Because handlers are usually associated only with one class, it is best to make the handler
+    class an inner class. You also avoid naming conflicts by doing so.
+
+ */
