@@ -39,30 +39,32 @@ public class Main extends Application {
 //        primaryStage.show();
 
         // 15.3
-        StackPane pane = new StackPane();
-        Circle circle = new Circle(50);
-        circle.setStroke(Color.BLUEVIOLET);
-        circle.setFill(Color.WHITE);
-        pane.getChildren().add(circle);
+//        StackPane pane = new StackPane();
+//        Circle circle = new Circle(50);
+//        circle.setStroke(Color.BLUEVIOLET);
+//        circle.setFill(Color.WHITE);
+//        pane.getChildren().add(circle);
+//
+//        HBox hBox = new HBox();
+//        hBox.setSpacing(10);
+//        hBox.setAlignment(Pos.CENTER);
+//
+//        Button btEnlarge = new Button("Enlarge");
+//        Button btShrink = new Button("Shrink");
+//
+//        hBox.getChildren().addAll(btEnlarge, btShrink);
+//
+//        BorderPane borderPane = new BorderPane();
+//        borderPane.setCenter(pane);
+//        borderPane.setBottom(hBox);
+//        BorderPane.setAlignment(hBox, Pos.CENTER); // applies to anything that is a BorderPane? I think yes
+//
+//        Scene scene = new Scene(borderPane, 200, 150); // notice how we had multple panes put into one pane in order to pass them into this scene
+//        primaryStage.setTitle("CircleWithoutEvents");
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
 
-        HBox hBox = new HBox();
-        hBox.setSpacing(10);
-        hBox.setAlignment(Pos.CENTER);
-
-        Button btEnlarge = new Button("Enlarge");
-        Button btShrink = new Button("Shrink");
-
-        hBox.getChildren().addAll(btEnlarge, btShrink);
-
-        BorderPane borderPane = new BorderPane();
-        borderPane.setCenter(pane);
-        borderPane.setBottom(hBox);
-        BorderPane.setAlignment(hBox, Pos.CENTER); // applies to anything that is a BorderPane? I think yes
-
-        Scene scene = new Scene(borderPane, 200, 150); // notice how we had multple panes put into one pane in order to pass them into this scene
-        primaryStage.setTitle("CircleWithoutEvents");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        // 15.5 Anonymous Inner Class Handler:
 
 
     }
@@ -128,5 +130,15 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
     naming would be...outer$inner.class.
     Because handlers are usually associated only with one class, it is best to make the handler
     class an inner class. You also avoid naming conflicts by doing so.
+
+ */
+
+// 15.5 Anonymous Inner Class Handlers: an inner class without a name, useful because they usually belong to only
+// one class and arent usually access or used by any outside classes.
+/*
+    Syntax...method.setOnActoni(new EventHandler<ActionEvent>() { method{ and innner scope}});
+    Syntax from book point of view...new superclassname/interfacename(){ implement/override methods in superclass or interface}
+    Rules of anonymous innerclass: must always extend a superclass or interface, must implement abstract methods, must use no-arg constructor, if it is an interface then Object(),
+    naming of the file is outclass$n.class where n is the number associated to the anonymous class.
 
  */
