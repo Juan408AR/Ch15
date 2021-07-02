@@ -19,24 +19,24 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-//        HBox pane = new HBox(10);
-//        pane.setAlignment(Pos.CENTER);
-//        Button btOk = new Button("OK");
-//        Button btCancel = new Button("Cancel");
-//        OKHandlerClass handler1 = new OKHandlerClass();
-//        CancelHandlerClass handler2 = new CancelHandlerClass();
-//
-//        // when button is clicked it triggers the handler
-//        // the arg class is of type event-handler so it is able to be passed into this method that accepts only event-handler types
-//        btOk.setOnAction(handler1);
-//        btCancel.setOnAction(handler2);
-//
-//        pane.getChildren().addAll(btOk, btCancel);
-//
-//        Scene scene = new Scene(pane);
-//        primaryStage.setTitle("Event buttons");
-//        primaryStage.setScene(scene);
-//        primaryStage.show();
+        HBox pane = new HBox(10);
+        pane.setAlignment(Pos.CENTER);
+        Button btOk = new Button("OK");
+        Button btCancel = new Button("Cancel");
+        OKHandlerClass handler1 = new OKHandlerClass();
+        CancelHandlerClass handler2 = new CancelHandlerClass();
+
+        // when button is clicked it triggers the handler
+        // the arg class is of type event-handler so it is able to be passed into this method that accepts only event-handler types
+        btOk.setOnAction(handler1);
+        btCancel.setOnAction(handler2);
+
+        pane.getChildren().addAll(btOk, btCancel);
+
+        Scene scene = new Scene(pane);
+        primaryStage.setTitle("Event buttons");
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
         // 15.3
 //        StackPane pane = new StackPane();
@@ -140,5 +140,30 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
     Syntax from book point of view...new superclassname/interfacename(){ implement/override methods in superclass or interface}
     Rules of anonymous innerclass: must always extend a superclass or interface, must implement abstract methods, must use no-arg constructor, if it is an interface then Object(),
     naming of the file is outclass$n.class where n is the number associated to the anonymous class.
+
+ */
+
+// 15.6 Simplifying Event Handling Using Lambda Expressions:
+/*
+    Making coding more simple by being less verbose...instead of stating eventhandler and override method,
+    simply use the following syntax: btEnlarge.setOnAction(e -> {}); //uses the fat arrow
+    In simple terms, it gets rid of the verbose from the anonymous class.
+    Syntax: (type1 param1, type 2 param2...) -> expression
+    or
+    (type1 param1, type 2 param2...) -> {statements};
+    notice how one requires brackets because has multiple statements but if is only one then you do not need brackets
+    type such as type1 above can be explicit or implicit...also if there is only one parameter then you can exclude the parenthesis
+    sample...
+        e->{code...}
+
+    lambda expression are treated as objects created from anonymous inner classes,
+    How it works is that an actionevent method can only take a parameter of handletype
+    so it make e of type actionevent implicitly because that is the only data type that is expected as a parameter
+    and that the statements inside of the body belong to the e object.
+    !!! compiler can only understand one lambda expression method inside of the parameter.
+    Functional interface or SAM(single abstract method) is needed for lambda expression to work.
+
+
+
 
  */
