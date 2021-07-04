@@ -19,24 +19,24 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        HBox pane = new HBox(10);
-        pane.setAlignment(Pos.CENTER);
-        Button btOk = new Button("OK");
-        Button btCancel = new Button("Cancel");
-        OKHandlerClass handler1 = new OKHandlerClass();
-        CancelHandlerClass handler2 = new CancelHandlerClass();
-
-        // when button is clicked it triggers the handler
-        // the arg class is of type event-handler so it is able to be passed into this method that accepts only event-handler types
-        btOk.setOnAction(handler1);
-        btCancel.setOnAction(handler2);
-
-        pane.getChildren().addAll(btOk, btCancel);
-
-        Scene scene = new Scene(pane);
-        primaryStage.setTitle("Event buttons");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+//        HBox pane = new HBox(10);
+//        pane.setAlignment(Pos.CENTER);
+//        Button btOk = new Button("OK");
+//        Button btCancel = new Button("Cancel");
+//        OKHandlerClass handler1 = new OKHandlerClass();
+//        CancelHandlerClass handler2 = new CancelHandlerClass();
+//
+//        // when button is clicked it triggers the handler
+//        // the arg class is of type event-handler so it is able to be passed into this method that accepts only event-handler types
+//        btOk.setOnAction(handler1);
+//        btCancel.setOnAction(handler2);
+//
+//        pane.getChildren().addAll(btOk, btCancel);
+//
+//        Scene scene = new Scene(pane);
+//        primaryStage.setTitle("Event buttons");
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
 
         // 15.3
 //        StackPane pane = new StackPane();
@@ -162,8 +162,21 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
     and that the statements inside of the body belong to the e object.
     !!! compiler can only understand one lambda expression method inside of the parameter.
     Functional interface or SAM(single abstract method) is needed for lambda expression to work.
+ */
+
+// 15.7 Case Study: loan Calculator: using event driven programming to create a gui to create a loan calculator.
+/*
+    Recap: shows how to separated related chunks of code, form from function.
+
+    We don't use a scanner to store input.Instead we store it in the textfield and on the action,
+    we extract the info in the textfield and set-it as text inside other textfields to display it.
+    Also, we use a method to prevent the user from altering the calculate info inside of the textbox
 
 
+ */
 
+// 15.8 Mouse Events: whenever a mouse: clicks, released, clicked, moved, or dragged on node or scene
+// a Mouse Event is fired.
+/*
 
  */
