@@ -178,5 +178,6 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
 // 15.8 Mouse Events: whenever a mouse: clicks, released, clicked, moved, or dragged on node or scene
 // a Mouse Event is fired.
 /*
+    There are function that indicate which buttons where pressed.
 
  */
