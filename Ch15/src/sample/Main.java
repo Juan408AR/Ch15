@@ -179,5 +179,11 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
 // a Mouse Event is fired.
 /*
     There are function that indicate which buttons where pressed.
+ */
 
+// 15.9 Key Events:
+/*
+    When is a key is: pressed, held, or released an event could be fired.
+    Keyevents are responsible for control, perform actions, get input from keyboard.
+    Key events are encapsulated by keyevents.
  */
