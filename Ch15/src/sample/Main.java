@@ -186,4 +186,9 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
     When is a key is: pressed, held, or released an event could be fired.
     Keyevents are responsible for control, perform actions, get input from keyboard.
     Key events are encapsulated by keyevents.
+    We learned how to add multiple types of events to a program.
+    One issue encountered was with focus.
+    When a button is clicked on the window/scene the focus is shifted to the button label
+    so you need to refocus the program to the scene instead of the button after
+    each instance of a button being clicked.
  */

@@ -5,12 +5,15 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
+// remember to build before running or else the previous version of the program will be run...
+
+
 public class KeyEventDemo extends Application{
     @Override
     public void start(Stage stage){
         // creating a pane and creating text
         Pane pane = new Pane();
-        Text text = new Text(20, 20, "A");
+        Text text = new Text(20, 20, "J");
 
         // adding text to the pane and we are gonna add an action in
         // order to control the position of
@@ -28,6 +31,7 @@ public class KeyEventDemo extends Application{
                 // then that letter or digit will be set as the new text name
                 default:
                     if((Character.isLetterOrDigit(e.getText().charAt(0))))
+//                        text.setText((text.getText() + e.getText())); // used to append
                         text.setText(e.getText());
             }
         });
@@ -37,7 +41,10 @@ public class KeyEventDemo extends Application{
         stage.setScene(scene);
         stage.show();
 
-        text.requestFocus();
+        text.requestFocus();    // ?used to listen for key input? used to receive key input. // must be at the end of the stage
+
+
+
 
     }
 }
