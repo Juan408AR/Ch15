@@ -192,3 +192,8 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
     so you need to refocus the program to the scene instead of the button after
     each instance of a button being clicked.
  */
+
+// 15.10 Listeners for Observable Objects: a listener waits for changes then reacts, it basically processes a value change
+/*
+
+ */
