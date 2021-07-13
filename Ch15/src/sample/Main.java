@@ -195,5 +195,12 @@ class CancelHandlerClass implements EventHandler<ActionEvent>{
 
 // 15.10 Listeners for Observable Objects: a listener waits for changes then reacts, it basically processes a value change
 /*
+    Detect changes to an object of an observable type and proceed with an action if you would like.
+ */
 
+// 15.11 Animation: Animation class with the features necessary for animation
+/*
+    we will learn about transition,fade, and timeline.
+    Pathtransition: moves the nodes along a path.
+    15.11.11:
  */
