@@ -1,4 +1,5 @@
 package sample;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -19,9 +20,10 @@ public class FlagRisingDemo extends Application {
         ImageView imageView = new ImageView(image);
         pane.getChildren().add(imageView);
 
-        PathTransition pt = new PathTransition(Duration.millis(10000),
-                new Line(100, 200, 100,0), imageView);
-        pt.setCycleCount(5);
+        PathTransition pt = new PathTransition(Duration.millis(6000),
+                new Line(100, 800, 900,20), imageView);
+        pt.setCycleCount(Timeline.INDEFINITE); // args is same as -1
+        pt.setAutoReverse(true);
         pt.play();
 
         Scene scene = new Scene(pane, 500, 500);
